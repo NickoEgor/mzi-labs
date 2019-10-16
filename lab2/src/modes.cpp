@@ -1,5 +1,6 @@
-#include "modes.h"
+#include "../include/modes.h"
 
+// прямая замена
 void encrypt_plain(uint8_t *outenc, const uint8_t *inenc, const uint8_t *ks,
                    const int32_t len) {
   uint8_t buffer[16] = {0};
@@ -22,6 +23,7 @@ void decrypt_plain(uint8_t *outdec, const uint8_t *outenc, const uint8_t *ks,
   }
 }
 
+// сцепление блоков
 void encrypt_block(uint8_t *outenc, const uint8_t *inenc, const uint8_t *ks,
                    const int32_t len, const uint8_t *s) {
   uint8_t buffer[16] = {0};
@@ -60,6 +62,7 @@ void decrypt_block(uint8_t *outdec, const uint8_t *outenc, const uint8_t *ks,
   }
 }
 
+// гаммирование
 void encrypt_gamming(uint8_t *outenc, const uint8_t *inenc, const uint8_t *ks,
                      const int32_t len, const uint8_t *s) {
   uint8_t buffer[16] = {0};
@@ -100,6 +103,7 @@ void decrypt_gamming(uint8_t *outdec, const uint8_t *outenc, const uint8_t *ks,
   }
 }
 
+// счётчик
 void encrypt_counter(uint8_t *outenc, const uint8_t *inenc, const uint8_t *ks,
                      const int32_t len, const uint8_t *s) {
   uint8_t buffer[16] = {0};

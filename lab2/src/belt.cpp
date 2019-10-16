@@ -31,6 +31,7 @@ void belt_encrypt(uint8_t *out, const uint8_t *in, const uint8_t *ks) {
   uint32_t b = load32(in + 4);
   uint32_t c = load32(in + 8);
   uint32_t d = load32(in + 12);
+
   uint32_t e;
   std::size_t i;
   uint32_t tmp;
