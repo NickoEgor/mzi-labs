@@ -8,7 +8,7 @@
 std::vector<uint8_t> prompt_key(int len = 8) {
   std::string key;
   std::cout << "Enter key:" << std::endl;
-  std::cin >> key;
+  std::getline(std::cin, key);
   key.resize(len, 0);
   return std::vector<uint8_t>(key.begin(), key.end());
 }
@@ -16,7 +16,7 @@ std::vector<uint8_t> prompt_key(int len = 8) {
 std::vector<uint8_t> prompt_msg() {
   std::string msg;
   std::cout << "Enter msg:" << std::endl;
-  std::cin >> msg;
+  std::getline(std::cin, msg);
 
   int remain = msg.size() % 8;
   if (remain > 0) {
