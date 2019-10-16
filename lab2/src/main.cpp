@@ -14,11 +14,8 @@ int main() {
   uint8_t synhro[] = "Hello world!";
   uint8_t keyenc[] = "my_super_secret_code_no_one_knows";
 
-  std::cout << "ALIVE1" << std::endl;
   encrypt_file(m, keyenc, synhro, init_text_file, encrypted_text_file);
-  std::cout << "ALIVE2" << std::endl;
   decrypt_file(m, keyenc, synhro, encrypted_text_file, decrypted_text_file);
-  std::cout << "ALIVE3" << std::endl;
 
   return 0;
 }
