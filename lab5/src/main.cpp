@@ -33,6 +33,7 @@ int main() {
   std::string msg = prompt("message");
   std::string key = prompt("key");
   auto enc = hmac(msg, key);
+  std::cout << "Message hash:" << std::endl;
   print_vector_uint(enc);
 
   return 0;
